@@ -52,12 +52,17 @@ menu[2] = "- Press PS to quit -"
 checking_gamepad = 0
 gamepad_step = 0
 
+//Load settings
+scr_load_settings();
+
 //Load file SaveA.sav
 if file_exists(global.file) 
 {
     scr_load(global.file)
 }
-else
+
+//Save settings for PS Vita
+if !file_exists("Settings.dat")
 {
  checking_gamepad = 1
 }
@@ -204,6 +209,7 @@ if (checking_gamepad){
                         global.gamepadstart = key
                         checking_gamepad = 0
                         gamepad_step = 0
+                        scr_save_settings();
                         break
                 }
             }

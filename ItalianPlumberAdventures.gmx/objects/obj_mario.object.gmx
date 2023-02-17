@@ -2098,7 +2098,7 @@ and holding = 0))
         stompstyle = 1
 
         //Play spin jump sound
-        audio_play_sound(snd_spin,0,0)
+        audio_play_sound(snd_jump,0,0)
 
         //Create spin jump projectiles
         alarm[7] = 10
